@@ -34,12 +34,12 @@
         })
         .then(function(response){
             console.log(response);
-            var newDiv = $("<div>");
             var definition = response.query.search[0].snippet;
-            var p = $("<p>").text(definition);
-            newDiv.prepend(p);
+            var newDiv = $("<div>"+definition);
+            // var p = $("<p>").text(definition);
+            // newDiv.prepend(p);
 
-            $("#card").append(newDiv);
+            $("#card").prepend(newDiv);
 
         })
         
